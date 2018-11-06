@@ -17,19 +17,27 @@ public class ArrayMethods{
       System.out.print("\n");
     }
 
-	public static int rowSum(int[][] ary, int x){
-		int output = 0;
-		for (int col = 0; col < ary.length; col++){
-			output = output + ary[col][x];
-		}
-		return output;
+	public static int rowSum(int[][] ary, int x) {
+    int counter = 0;
+    try {
+      for (int row = 0; row < ary[x].length; row++) {
+        counter = counter + ary[x][row];
+      }
+    } catch (ArrayIndexOutOfBoundsException a) {
+		System.out.println("input too large/small");
 	}
+    return counter;
+  }
 
-	public static int columnSum(int[][] ary, int x){
-		int output = 0;
-		for (int row = 0; row < ary[x].length; row++){
-			output += ary[x][row];
-		}
-		return output;
-	}
+  public static int columnSum(int[][] ary, int x) {
+    int counter = 0;
+    for (int col = 0; col < ary.length; col++) {
+      try {
+        counter = counter + ary[col][x];
+      } catch (ArrayIndexOutOfBoundsException a) {
+		  System.out.println("input too large/small");
+	  }
+    }
+    return counter;
+  }
 }
