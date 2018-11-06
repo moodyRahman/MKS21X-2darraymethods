@@ -18,6 +18,14 @@ public class Driver{
 		System.out.println(res2);
 		System.out.println(res0);
 		System.out.println(resf);
+		System.out.println("");
+
+		int col2 = ArrayMethods.columnSum(a, 2);
+		int col0 = ArrayMethods.columnSum(a, 0);
+		int colf = ArrayMethods.columnSum(a, a.length - 1);
+		System.out.println(col2);
+		System.out.println(col0);
+		System.out.println(colf);
 
 
 	}
