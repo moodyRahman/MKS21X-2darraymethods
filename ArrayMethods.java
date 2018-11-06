@@ -40,4 +40,22 @@ public class ArrayMethods{
     }
     return counter;
   }
+
+
+  public static int[] allRowSums(int[][] ary) {
+    int[] output = new int[ary.length];
+    for (int row = 0; row < output.length; row++) {
+      output[row] = ArrayMethods.rowSum(ary, row);
+    }
+    return output;
+  }
+
+  public static int[] allColSums(int[][] ary) {
+    int lag = 0;
+    for (int col = 0; col < ary.length; col++) {
+      if (ary[col].length > lag) {
+        lag = ary[col].length;
+      }
+    }
+}
 }
