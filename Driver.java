@@ -11,7 +11,13 @@ public class Driver{
 			}
 		}
 
-		System.out.println(ArrayMethods.rowSum(a, 2));
+		ArrayMethods.printArray(a);
+		int res2 = ArrayMethods.rowSum(a, 2);
+		int res0 = ArrayMethods.rowSum(a, 0);
+		int resf = ArrayMethods.rowSum(a, a.length - 1);
+		System.out.println(res2);
+		System.out.println(res0);
+		System.out.println(resf);
 
 
 	}
