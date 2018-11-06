@@ -3,7 +3,6 @@
 public class ArrayMethods{
 
 	ArrayMethods(){
-
 	}
 
 	public static void printArray(int[][] array){
@@ -17,11 +16,19 @@ public class ArrayMethods{
       }
       System.out.print("\n");
     }
-	
+
 	public static int rowSum(int[][] ary, int x){
 		int output = 0;
 		for (int col = 0; col < ary.length; col++){
 			output = output + ary[col][x];
+		}
+		return output;
+	}
+
+	public static int columnSum(int[][] ary, int x){
+		int output = 0;
+		for (int row = 0; row < ary[x].length; row++){
+			output += ary[x][row];
 		}
 		return output;
 	}
